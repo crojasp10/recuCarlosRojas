@@ -34,13 +34,8 @@ function App() {
 
       {/* 🚩 Implementar acá */}
 
-      <select value={favorita} onChange={handleFavorita}>
-        <option value="">Selecciona una plataforma</option>
-        <option value="Twitter">Twitter</option>
-        <option value="Facebook">Facebook</option>
-        <option value="YouTube">YouTube</option>
-      </select>
-
+      <Tarjeta favorita = {favorita} setFavorita={setFavorita} />
+    
       <button onClick={handleTema}>Cambiar tema</button>
     </div>
   );

@@ -13,14 +13,15 @@ import Item from './Item';
 // PROPS: Listado recibe el método heredado de App y se lo pasa a cada Item.
 
 export default function Tarjeta(props) {
+  
   return (
-    <ul>
-      {/* 🚩 Implementar acá */}
+     <ul>
       {listadoPlataformas.map((plataforma, index) => (
         <Item
           key={index}
           plataforma={plataforma}
-          elegirFavorita={elegirFavorita}
+          setFavorita={props.setFavorita}
+          favorita={plataforma === props.favorita}
         />
       ))}
     </ul>
