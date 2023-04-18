@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Tarjeta from './componentes/Tarjeta';
 import "./index.css";
 
 // CONSIGNAS EN APP:
@@ -15,6 +15,7 @@ function App() {
   const [temaOscuro, setTemaOscuro] = useState(false);
   const [favorita, setFavorita] = useState("");
 
+ 
 
   const handleTema = () => {
    setTemaOscuro(!temaOscuro);
@@ -34,11 +35,11 @@ function App() {
       {/* 🚩 Implementar acá */}
 
       <select value={favorita} onChange={handleFavorita}>
-      <option value="">Selecciona una plataforma</option>
-      <option value="Twitter">Twitter</option>
-      <option value="Facebook">Facebook</option>
-      <option value="YouTube">YouTube</option>
-    </select>
+        <option value="">Selecciona una plataforma</option>
+        <option value="Twitter">Twitter</option>
+        <option value="Facebook">Facebook</option>
+        <option value="YouTube">YouTube</option>
+      </select>
 
       <button onClick={handleTema}>Cambiar tema</button>
     </div>

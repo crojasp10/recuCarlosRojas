@@ -9,9 +9,12 @@
 
 export default function Item(props) {
     return (
-      <>
-          // 🚩
-      </>
+      
+    <li onClick={() => props.seleccionarFavorita(props.nombre)}>
+      {props.nombre}
+    </li>
+
+
     );
   }
   

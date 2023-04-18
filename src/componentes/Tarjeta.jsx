@@ -1,5 +1,5 @@
 const listadoPlataformas = ["Twitter", "Facebook", "Youtube"];
-
+import Item from './Item';
 
 // CONSIGNAS EN TARJETA:
 // 1- Importar Item
@@ -16,6 +16,13 @@ export default function Tarjeta(props) {
   return (
     <ul>
       {/* 🚩 Implementar acá */}
+      {listadoPlataformas.map((plataforma, index) => (
+        <Item
+          key={index}
+          plataforma={plataforma}
+          elegirFavorita={elegirFavorita}
+        />
+      ))}
     </ul>
   );
 }
